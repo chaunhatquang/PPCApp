@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_trang_chu"
+            android:icon="@drawable/icon_menu_doitac"
+            android:title="Trang Chủ" />
+        <item
+            android:id="@+id/nav_tin_tuc"
+            android:icon="@drawable/icon_menu_doitac"
+            android:title="Tin Tức" />
+        <item
+            android:id="@+id/nav_doi_tac"
+            android:icon="@drawable/icon_menu_doitac"
+            android:title="Đối Tác" />
+        <item
+            android:id="@+id/nav_tuyen_dung"
+            android:icon="@drawable/icon_menu_doitac"
+            android:title="Tuyển Dụng" />
+        <item
+            android:id="@+id/nav_Ve_cong_ty"
+            android:icon="@drawable/icon_menu_doitac"
+            android:title="Về Công Ty" />
+        <item
+            android:id="@+id/nav_tuy_chinh"
+            android:icon="@drawable/icon_menu_doitac"
+            android:title="Tùy Chỉnh" />
+    </group>
+
+
+</menu>
