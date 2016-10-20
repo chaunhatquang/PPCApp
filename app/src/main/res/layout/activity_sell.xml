@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sell"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.haitr.ppc_app.Activity.SellActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/include"></include>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listSells"
+        android:layout_below="@+id/include"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp">
+    </ListView>
+
+</RelativeLayout>
