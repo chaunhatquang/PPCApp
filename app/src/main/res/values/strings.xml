@@ -25,4 +25,6 @@
     <string name="item_call">CALL</string>
     <string name="item_mail">MAIL</string>
     <string name="item_maps">MAPS</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps_sell">Map</string>
 </resources>

@@ -29,7 +29,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        getActivity().setTitle("Trang Chu");
+        getActivity().setTitle("Trang chủ");
         // Inflate the layout for this fragment
         btnBuy = (Button) view.findViewById(R.id.button_buy);
         btnSell = (Button) view.findViewById(R.id.button_sell);
@@ -45,15 +45,15 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button_sell:
-                Intent sell_intent = new Intent(getContext(), SellActivity.class);
+                Intent sell_intent = new Intent(getActivity(),SellActivity.class);
                 startActivity(sell_intent);
                 break;
             case R.id.button_buy:
-                Intent buy_intent = new Intent(getContext(), BuyActivity.class);
+                Intent buy_intent = new Intent(getContext(),BuyActivity.class);
                 startActivity(buy_intent);
                 break;
             case R.id.button_reles:
-                Intent reles_intent = new Intent(getContext(), RelesActivity.class);
+                Intent reles_intent = new Intent(getContext(),RelesActivity.class);
                 startActivity(reles_intent);
                 break;
             default:

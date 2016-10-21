@@ -4,5 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="ppc_color">#342214</color>
+    <color name="color_Main">#342214</color>
+    <color name="color_Text">#130d06</color>
+    <color name="color_detailed_button">#3f6af7</color>
+    <color name="color_item">#f2f2f2</color>
 </resources>

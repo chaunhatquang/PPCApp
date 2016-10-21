@@ -4,24 +4,32 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.haitr.ppc_app.Buy.DetailBuyActivity;
 import com.example.haitr.ppc_app.R;
 import com.example.haitr.ppc_app.SellsEntity;
 
 import java.io.ByteArrayInputStream;
 
-public class DetailedProjectActivity extends Activity {
+public class DetailedProjectActivity extends AppCompatActivity{
     TextView txtName,txtView,txtCity,txtDistrict,txtPrice,txtBadroom,txtNote;
     ImageView img,imgcall,imgmail,imgmaps;
+    Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed_project);
+        initToolBar();
         Bundle b = getIntent().getBundleExtra("bundle");
         final SellsEntity sellsEntity = (SellsEntity)b.getSerializable("sell");
         txtName = (TextView)findViewById(R.id.txtTitle);
@@ -63,6 +71,20 @@ public class DetailedProjectActivity extends Activity {
                 String phone = "0838221122";
                 Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
                 startActivity(intent);
+            }
+        });
+    }
+
+    private void initToolBar() {
+        toolbar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        toolbar.setNavigationIcon(R.drawable.back);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent back = new Intent(getApplicationContext(),SellActivity.class);
+                startActivity(back);
             }
         });
     }

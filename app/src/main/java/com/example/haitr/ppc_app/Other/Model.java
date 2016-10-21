@@ -1,6 +1,7 @@
 package com.example.haitr.ppc_app.Other;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by Me on 10/18/2016.
@@ -8,72 +9,34 @@ import java.io.Serializable;
 
 public class Model implements Serializable {
     int id;
-    String Domain;
+    String Project;
+    String Price,view,city,district;
+    int badRoom;
+    String note,lat,lon;
+
+
     byte [] Thumb;
-    String Des,Title,Address,Email,Hotline;
-    int idloainha,idloaigiaodich;
-    String ChuDauTu;
-    double dientich;
-    int socan;
-    String bangiao,loaicanho,link,Tienich,HinhThucSoHuu,TinhTrang;
-    float lat,lon;
 
-    public Model(int id, String domain, byte[] thumb, String des, String title, String address, String email, String hotline, int idloainha, int idloaigiaodich,
-                 String chuDauTu, double dientich, int socan, String bangiao, String loaicanho, String link, String tienich, String hinhThucSoHuu, String tinhTrang,
-                 float lat, float lon)
-    {
-        this.id = id;
-        Domain = domain;
-        Thumb = thumb;
-        Des = des;
-        Title = title;
-        Address = address;
-        Email = email;
-        Hotline = hotline;
-        this.idloainha = idloainha;
-        this.idloaigiaodich = idloaigiaodich;
-        ChuDauTu = chuDauTu;
-        this.dientich = dientich;
-        this.socan = socan;
-        this.bangiao = bangiao;
-        this.loaicanho = loaicanho;
-        this.link = link;
-        Tienich = tienich;
-        HinhThucSoHuu = hinhThucSoHuu;
-        TinhTrang = tinhTrang;
-        this.lat = lat;
-        this.lon = lon;
+    public int getBadRoom() {
+        return badRoom;
     }
 
-    /*public Model(int id, String des, String title, String address, String email, String hotline) {
-        this.id = id;
-        Des = des;
-        Title = title;
-        Address = address;
-        Email = email;
-        Hotline = hotline;
-    }*/
-
-    public Model(int id, byte[] thumb, String des, String title, String address, String email, String hotline) {
-        this.id = id;
-        Thumb = thumb;
-        Des = des;
-        Title = title;
-        Address = address;
-        Email = email;
-        Hotline = hotline;
+    public void setBadRoom(int badRoom) {
+        this.badRoom = badRoom;
     }
 
-    public Model(int id, byte[] thumb, String des, String title, String address, String email, String hotline, float lat, float lon) {
+    public Model(int id, String project, String price, String view, String city, String district, int badRoom, String note, String lon, String lat, byte[] thumb) {
         this.id = id;
-        Thumb = thumb;
-        Des = des;
-        Title = title;
-        Address = address;
-        Email = email;
-        Hotline = hotline;
-        this.lat = lat;
+        Project = project;
+        Price = price;
+        this.view = view;
+        this.city = city;
+        this.district = district;
+        this.badRoom = badRoom;
+        this.note = note;
         this.lon = lon;
+        this.lat = lat;
+        Thumb = thumb;
     }
 
     public int getId() {
@@ -84,12 +47,70 @@ public class Model implements Serializable {
         this.id = id;
     }
 
-    public String getDomain() {
-        return Domain;
+    public String getProject() {
+        return Project;
     }
 
-    public void setDomain(String domain) {
-        Domain = domain;
+    public void setProject(String project) {
+        Project = project;
+    }
+
+    public String getView() {
+        return view;
+    }
+
+    public void setView(String view) {
+        this.view = view;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getPrice() {
+        return Price;
+    }
+
+    public void setPrice(String price) {
+        Price = price;
+    }
+
+    public String getDistrict() {
+        return district;
+    }
+
+    public void setDistrict(String district) {
+        this.district = district;
+    }
+
+
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+    public String getLat() {
+        return lat;
+    }
+
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
+
+    public String getLon() {
+        return lon;
+    }
+
+    public void setLon(String lon) {
+        this.lon = lon;
     }
 
     public byte[] getThumb() {
@@ -98,149 +119,5 @@ public class Model implements Serializable {
 
     public void setThumb(byte[] thumb) {
         Thumb = thumb;
-    }
-
-    public String getDes() {
-        return Des;
-    }
-
-    public void setDes(String des) {
-        Des = des;
-    }
-
-    public String getTitle() {
-        return Title;
-    }
-
-    public void setTitle(String title) {
-        Title = title;
-    }
-
-    public String getAddress() {
-        return Address;
-    }
-
-    public void setAddress(String address) {
-        Address = address;
-    }
-
-    public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String email) {
-        Email = email;
-    }
-
-    public String getHotline() {
-        return Hotline;
-    }
-
-    public void setHotline(String hotline) {
-        Hotline = hotline;
-    }
-
-    public int getIdloainha() {
-        return idloainha;
-    }
-
-    public void setIdloainha(int idloainha) {
-        this.idloainha = idloainha;
-    }
-
-    public int getIdloaigiaodich() {
-        return idloaigiaodich;
-    }
-
-    public void setIdloaigiaodich(int idloaigiaodich) {
-        this.idloaigiaodich = idloaigiaodich;
-    }
-
-    public String getChuDauTu() {
-        return ChuDauTu;
-    }
-
-    public void setChuDauTu(String chuDauTu) {
-        ChuDauTu = chuDauTu;
-    }
-
-    public double getDientich() {
-        return dientich;
-    }
-
-    public void setDientich(double dientich) {
-        this.dientich = dientich;
-    }
-
-    public int getSocan() {
-        return socan;
-    }
-
-    public void setSocan(int socan) {
-        this.socan = socan;
-    }
-
-    public String getBangiao() {
-        return bangiao;
-    }
-
-    public void setBangiao(String bangiao) {
-        this.bangiao = bangiao;
-    }
-
-    public String getLoaicanho() {
-        return loaicanho;
-    }
-
-    public void setLoaicanho(String loaicanho) {
-        this.loaicanho = loaicanho;
-    }
-
-    public String getLink() {
-        return link;
-    }
-
-    public void setLink(String link) {
-        this.link = link;
-    }
-
-    public String getTienich() {
-        return Tienich;
-    }
-
-    public void setTienich(String tienich) {
-        Tienich = tienich;
-    }
-
-    public String getHinhThucSoHuu() {
-        return HinhThucSoHuu;
-    }
-
-    public void setHinhThucSoHuu(String hinhThucSoHuu) {
-        HinhThucSoHuu = hinhThucSoHuu;
-    }
-
-    public String getTinhTrang() {
-        return TinhTrang;
-    }
-
-    public void setTinhTrang(String tinhTrang) {
-        TinhTrang = tinhTrang;
-    }
-
-    public float getLat() {
-        return lat;
-    }
-
-    public void setLat(float lat) {
-        this.lat = lat;
-    }
-
-    public float getLon() {
-        return lon;
-    }
-
-    public void setLon(float lon) {
-        this.lon = lon;
     }
 }

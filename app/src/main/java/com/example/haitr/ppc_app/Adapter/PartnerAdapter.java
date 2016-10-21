@@ -1,11 +1,13 @@
 package com.example.haitr.ppc_app.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.haitr.ppc_app.Activity.PartnerDetailActivity;
 import com.example.haitr.ppc_app.Other.Item_Partner;
 import com.example.haitr.ppc_app.R;
 
@@ -32,9 +34,17 @@ public class PartnerAdapter extends RecyclerView.Adapter<RecyclerViewHolder_Part
     }
 
     @Override
-    public void onBindViewHolder(RecyclerViewHolder_Partner holder, int position) {
-        holder.img_Partner.setImageResource(item_partners.get(position).getiThumbnail());
-        holder.txtName_Partner.setText(item_partners.get(position).getsName());
+    public void onBindViewHolder(RecyclerViewHolder_Partner holder, final int position) {
+        holder.img_Partner.setImageResource(R.drawable.icon_partner);
+        holder.txtName_Partner.setText(item_partners.get(position).getName());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(),PartnerDetailActivity.class);
+                i.putExtra("Link",item_partners.get(position).getLink());
+                context.startActivity(i);
+            }
+        });
 
     }
 

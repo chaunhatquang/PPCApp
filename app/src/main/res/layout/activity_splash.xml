@@ -4,7 +4,7 @@
     android:id="@+id/activity_splash"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/ppc_color"
+    android:background="@color/color_Main"
     android:orientation="vertical"
     tools:context="com.example.haitr.ppc_app.Activity.SplashActivity">
 

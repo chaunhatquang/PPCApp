@@ -11,9 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.haitr.ppc_app.Adapter.PartnerAdapter;
+import com.example.haitr.ppc_app.Other.Item_News;
 import com.example.haitr.ppc_app.Other.Item_Partner;
 import com.example.haitr.ppc_app.R;
+import com.example.haitr.ppc_app.SellDatabaseOpenHelper;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,15 +51,17 @@ public class PartnerFragment extends Fragment {
         }
         return view;
     }
-
     private List<Item_Partner> getAllItem() {
         List<Item_Partner> item_partners = new ArrayList<Item_Partner>();
-        item_partners.add(new Item_Partner("Capital Land", R.drawable.bg_capital));
-        item_partners.add(new Item_Partner("Centurion International", R.drawable.bg_centurion));
-        item_partners.add(new Item_Partner("Collier International", R.drawable.bg_collier));
-        item_partners.add(new Item_Partner("CNC Group", R.drawable.bg_cnc));
-        item_partners.add(new Item_Partner("FLC Company", R.drawable.bg_flc));
+        SellDatabaseOpenHelper db = new SellDatabaseOpenHelper(getContext().getApplicationContext());
+        try {
+            db.create();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if(db.open()){
+            item_partners = db.getListPartner();
+        }
         return item_partners;
     }
-
 }

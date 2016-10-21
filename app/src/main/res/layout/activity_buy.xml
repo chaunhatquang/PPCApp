@@ -7,12 +7,10 @@
     android:orientation="vertical"
     tools:context="com.example.haitr.ppc_app.Activity.BuyActivity">
 
-    <include layout="@layout/toolbar"></include>
+    <include layout="@layout/toolbarback"></include>
 
     <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lv"
-
-        ></ListView>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lv"></ListView>
 </LinearLayout>

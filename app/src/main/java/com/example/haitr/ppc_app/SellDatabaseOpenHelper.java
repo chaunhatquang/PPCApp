@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.haitr.ppc_app.Other.Item_News;
+import com.example.haitr.ppc_app.Other.Item_Partner;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -138,13 +139,36 @@ public class SellDatabaseOpenHelper extends SQLiteOpenHelper {
             Float Latitude = cursor.getFloat(cursor.getColumnIndex("Latitude"));
             Float Lontitude = cursor.getFloat(cursor.getColumnIndex("Longtitude"));
             String block = cursor.getString(cursor.getColumnIndex("Block"));
-            SellsEntity getSellEntity = new SellsEntity(image,title,view,city,district,price,badroom,note,Latitude,Lontitude,block);
+            SellsEntity getSellEntity = new SellsEntity(image, title, view, city, district, price, badroom, note, Latitude, Lontitude, block);
             listSells.add(getSellEntity);
         }
         return listSells;
     }
-    public List<Item_News> getListNew(){
-        List<Item_News> list = new ArrayList<>();
-        return list;
+
+    public List<Item_News> getListNew() {
+        List<Item_News> listItemNew = new ArrayList<>();
+        String query = "SELECT * FROM News";
+        SQLiteDatabase db = SQLiteDatabase.openDatabase(DB_PATH + DB_NAME, null, SQLiteDatabase.OPEN_READWRITE);
+        Cursor cursor = db.rawQuery(query, null);
+        while (cursor.moveToNext()) {
+            String name = cursor.getString(cursor.getColumnIndex("Name"));
+            String link = cursor.getString(cursor.getColumnIndex("Link"));
+            Item_News getItemNews = new Item_News(name, R.drawable.bg_news, link);
+            listItemNew.add(getItemNews);
+        }
+        return listItemNew;
+    }
+    public List<Item_Partner> getListPartner() {
+        List<Item_Partner> listItemPartner = new ArrayList<>();
+        String query = "SELECT * FROM Partner";
+        SQLiteDatabase db = SQLiteDatabase.openDatabase(DB_PATH + DB_NAME, null, SQLiteDatabase.OPEN_READWRITE);
+        Cursor cursor = db.rawQuery(query, null);
+        while (cursor.moveToNext()) {
+            String name = cursor.getString(cursor.getColumnIndex("Name"));
+            String link = cursor.getString(cursor.getColumnIndex("Link"));
+            Item_Partner getItemPartner = new Item_Partner(name, R.drawable.icon_partner, link);
+            listItemPartner.add(getItemPartner);
+        }
+        return listItemPartner;
     }
 }

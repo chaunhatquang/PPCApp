@@ -12,6 +12,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.haitr.ppc_app.Fragment.AboutUsFragment;
@@ -45,6 +47,9 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         toolbar_title = (TextView) toolbar.findViewById(R.id.toolbar_title);
+        /*ImageView img= (ImageView) toolbar.findViewById(R.id.imgback);
+        img.setVisibility(View.GONE);
+*/
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowHomeEnabled(true);

@@ -1,54 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingTop="10dp">
+    android:orientation="vertical">
+
     <TextView
-        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:id="@+id/tvtitles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/txtName"
-        android:layout_margin="5dp"
-        android:text="THE SUN AVENUE"
-        android:textSize="18dp"
-        />
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:textColor="#000000"
+        android:textStyle="bold" />
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp">
-
-        <TextView
-            android:layout_width="114dp"
-            android:layout_height="31dp"
-            android:layout_gravity="bottom"
-            android:background="@drawable/price"
-            android:paddingLeft="20dp"
-            android:paddingRight="10dp"
-            android:paddingTop="15dp"
-            android:textColor="#fff"
-            android:textStyle="bold" />
-        <TextView
-            android:layout_width="61dp"
-            android:layout_height="59dp"
-            android:layout_gravity="right"
-            android:background="@drawable/type"
-            android:paddingLeft="20dp"
-            android:paddingRight="10dp"
-            android:paddingTop="15dp"
-            android:textColor="#fff"
-            android:textStyle="bold" />
+        android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/imgThumb"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/img"
+            android:layout_height="180dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/demo" />
+            android:src="@drawable/capture" />
     </FrameLayout>
-
 
 </LinearLayout>

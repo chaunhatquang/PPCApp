@@ -6,15 +6,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.widget.Toast;
 
-import com.example.haitr.ppc_app.Activity.NewDetailActivity;
+import com.example.haitr.ppc_app.Activity.DetailNewActivity;
+import com.example.haitr.ppc_app.Buy.DetailActivity;
 import com.example.haitr.ppc_app.Other.Item_News;
 import com.example.haitr.ppc_app.R;
 import com.example.haitr.ppc_app.SellDatabaseOpenHelper;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -44,8 +42,9 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerViewHolder_News> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent item = new Intent(v.getContext(), NewDetailActivity.class);
-                context.startActivity(item);
+                Intent i = new Intent(v.getContext(),DetailNewActivity.class);
+                i.putExtra("Link",item_news.get(position).getLink());
+                context.startActivity(i);
             }
         });
 

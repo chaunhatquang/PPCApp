@@ -17,7 +17,9 @@ import com.example.haitr.ppc_app.Adapter.NewsAdapter;
 import com.example.haitr.ppc_app.Other.Item_News;
 import com.example.haitr.ppc_app.R;
 import com.example.haitr.ppc_app.SellDatabaseOpenHelper;
+import com.example.haitr.ppc_app.SellsEntity;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,7 +42,7 @@ public class NewsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_news, container, false);
 
         // Inflate the layout for this fragment
-        getActivity().setTitle("Tin Tuc");
+        getActivity().setTitle("Tin tức");
         ActionBar.LayoutParams params = new ActionBar.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT);
         params.gravity = Gravity.CENTER;
@@ -67,6 +69,12 @@ public class NewsFragment extends Fragment {
 
     private List<Item_News> getAllItem() {
         List<Item_News> item_newses = new ArrayList<Item_News>();
+        SellDatabaseOpenHelper db = new SellDatabaseOpenHelper(getContext().getApplicationContext());
+        try {
+            db.create();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         if(db.open()){
             item_newses = db.getListNew();
         }

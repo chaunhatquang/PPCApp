@@ -6,7 +6,7 @@
 
     <ImageView
         android:id="@+id/image_Partner"
-        android:layout_width="150dp"
+        android:layout_width="129dp"
         android:layout_height="130dp"
         android:layout_marginLeft="10dp"
         android:src="@drawable/bg_centurion" />
@@ -18,7 +18,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="40dp"
         android:text="Centurion Corporation Limited"
-        android:textSize="15dp"
+        android:textSize="18dp"
         android:textStyle="bold" />
 
 </LinearLayout>
