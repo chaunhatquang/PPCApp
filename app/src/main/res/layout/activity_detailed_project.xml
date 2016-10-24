@@ -6,8 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context="com.perfectproperties.app.ppc_app.Activity.DetailedProjectActivity">
-
-    <include layout="@layout/toolbar"></include>
+    <include layout="@layout/toolbarback"></include>
 
     <FrameLayout
         android:layout_width="match_parent"

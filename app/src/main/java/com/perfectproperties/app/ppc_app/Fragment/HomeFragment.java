@@ -33,9 +33,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         btnBuy = (Button) view.findViewById(R.id.button_buy);
         btnSell = (Button) view.findViewById(R.id.button_sell);
-        btnReles = (Button) view.findViewById(R.id.button_reles);
+        //btnReles = (Button) view.findViewById(R.id.button_reles);
 
-        btnReles.setOnClickListener(this);
+       // btnReles.setOnClickListener(this);
         btnSell.setOnClickListener(this);
         btnBuy.setOnClickListener(this);
         return view;
@@ -52,10 +52,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 Intent buy_intent = new Intent(getContext(),BuyActivity.class);
                 startActivity(buy_intent);
                 break;
-            case R.id.button_reles:
-                Intent reles_intent = new Intent(getContext(),RelesActivity.class);
-                startActivity(reles_intent);
-                break;
+//            case R.id.button_reles:
+//                Intent reles_intent = new Intent(getContext(),RelesActivity.class);
+//                startActivity(reles_intent);
+//                break;
             default:
                 break;
         }

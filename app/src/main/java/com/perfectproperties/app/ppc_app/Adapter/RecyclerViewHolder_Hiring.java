@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import com.perfectproperties.app.ppc_app.R;
 
+
 /**
  * Created by haitr on 10/18/2016.
  */

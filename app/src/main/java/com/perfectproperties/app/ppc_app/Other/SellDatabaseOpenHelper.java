@@ -1,4 +1,4 @@
-package com.perfectproperties.app.ppc_app;
+package com.perfectproperties.app.ppc_app.Other;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -7,8 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.perfectproperties.app.ppc_app.Other.Item_News;
-import com.perfectproperties.app.ppc_app.Other.Item_Partner;
+import com.perfectproperties.app.ppc_app.R;
+import com.perfectproperties.app.ppc_app.SellsEntity;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -166,7 +166,7 @@ public class SellDatabaseOpenHelper extends SQLiteOpenHelper {
         while (cursor.moveToNext()) {
             String name = cursor.getString(cursor.getColumnIndex("Name"));
             String link = cursor.getString(cursor.getColumnIndex("Link"));
-            Item_Partner getItemPartner = new Item_Partner(name, R.drawable.icon_partner, link);
+            Item_Partner getItemPartner = new Item_Partner(name, R.drawable.icon_partner,link);
             listItemPartner.add(getItemPartner);
         }
         return listItemPartner;

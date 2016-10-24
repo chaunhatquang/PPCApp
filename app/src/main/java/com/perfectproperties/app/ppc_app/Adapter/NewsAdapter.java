@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.perfectproperties.app.ppc_app.Activity.NewDetailActivity;
+import com.perfectproperties.app.ppc_app.Activity.DetailNewActivity;
 import com.perfectproperties.app.ppc_app.Other.Item_News;
 import com.perfectproperties.app.ppc_app.R;
 import com.perfectproperties.app.ppc_app.SellDatabaseOpenHelper;
@@ -41,7 +41,7 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerViewHolder_News> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(),NewDetailActivity.class);
+                Intent i = new Intent(v.getContext(),DetailNewActivity.class);
                 i.putExtra("Link",item_news.get(position).getLink());
                 context.startActivity(i);
             }
