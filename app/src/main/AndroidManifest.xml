@@ -51,9 +51,9 @@
                 android:value="com.perfectproperties.app.ppc_app.Activity.MainActivity" />
         </activity>
         <activity android:name="com.perfectproperties.app.ppc_app.Activity.BuyActivity" />
-        <activity android:name="com.perfectproperties.app.ppc_app.Activity.NewDetailActivity" />
         <activity android:name="com.perfectproperties.app.ppc_app.Activity.PartnerDetailActivity" />
         <activity android:name="com.perfectproperties.app.ppc_app.Activity.ContentHiringActivity" />
+        <activity android:name="com.perfectproperties.app.ppc_app.Activity.DetailNewActivity" />
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
