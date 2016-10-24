@@ -5,28 +5,37 @@ package com.perfectproperties.app.ppc_app.Other;
  */
 
 public class Item_Partner {
-    private String sName;
-    private int iThumbnail;
+    private String name;
+    private int img;
+    private String link;
 
-    public String getsName() {
-        return sName;
+    public Item_Partner(String name, int img, String link) {
+        this.name = name;
+        this.img = img;
+        this.link = link;
     }
 
-    public void setsName(String sName) {
-        this.sName = sName;
+    public String getName() {
+        return name;
     }
 
-    public int getiThumbnail() {
-        return iThumbnail;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setiThumbnail(int iThumbnail) {
-        this.iThumbnail = iThumbnail;
+    public int getImg() {
+        return img;
     }
 
-    public Item_Partner(String sName, int iThumbnail) {
+    public void setImg(int img) {
+        this.img = img;
+    }
 
-        this.sName = sName;
-        this.iThumbnail = iThumbnail;
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 }

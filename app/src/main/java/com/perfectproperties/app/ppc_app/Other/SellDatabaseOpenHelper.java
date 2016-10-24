@@ -1,4 +1,4 @@
-package com.perfectproperties.app.ppc_app;
+package com.perfectproperties.app.ppc_app.Other;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -7,8 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.perfectproperties.app.ppc_app.Other.Item_News;
-import com.perfectproperties.app.ppc_app.Other.Item_Partner;
+import com.perfectproperties.app.ppc_app.R;
+import com.perfectproperties.app.ppc_app.SellsEntity;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -122,8 +122,8 @@ public class SellDatabaseOpenHelper extends SQLiteOpenHelper {
         return checkDB != null ? true : false;
     }
 
-    public List<SellsEntity> getListSells() {
-        List<SellsEntity> listSells = new ArrayList<>();
+    public List<com.perfectproperties.app.ppc_app.SellsEntity> getListSells() {
+        List<com.perfectproperties.app.ppc_app.SellsEntity> listSells = new ArrayList<>();
         String query = "SELECT Thumb,Block,Project,View,City,District,Price,Badroom,Note,Latitude,Longtitude FROM Customer_Sale";
         SQLiteDatabase db = SQLiteDatabase.openDatabase(DB_PATH + DB_NAME, null, SQLiteDatabase.OPEN_READWRITE);
         Cursor cursor = db.rawQuery(query, null);
@@ -139,7 +139,7 @@ public class SellDatabaseOpenHelper extends SQLiteOpenHelper {
             Float Latitude = cursor.getFloat(cursor.getColumnIndex("Latitude"));
             Float Lontitude = cursor.getFloat(cursor.getColumnIndex("Longtitude"));
             String block = cursor.getString(cursor.getColumnIndex("Block"));
-            SellsEntity getSellEntity = new SellsEntity(image, title, view, city, district, price, badroom, note, Latitude, Lontitude, block);
+            com.perfectproperties.app.ppc_app.SellsEntity getSellEntity = new SellsEntity(image, title, view, city, district, price, badroom, note, Latitude, Lontitude, block);
             listSells.add(getSellEntity);
         }
         return listSells;
@@ -166,7 +166,7 @@ public class SellDatabaseOpenHelper extends SQLiteOpenHelper {
         while (cursor.moveToNext()) {
             String name = cursor.getString(cursor.getColumnIndex("Name"));
             String link = cursor.getString(cursor.getColumnIndex("Link"));
-            Item_Partner getItemPartner = new Item_Partner(name, R.drawable.icon_partner, link);
+            Item_Partner getItemPartner = new Item_Partner(name, R.drawable.icon_partner,link);
             listItemPartner.add(getItemPartner);
         }
         return listItemPartner;
