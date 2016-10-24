@@ -4,7 +4,7 @@
     android:id="@+id/activity_reles"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.haitr.ppc_app.Activity.RelesActivity">
+    tools:context="com.perfectproperties.app.ppc_app.Activity.RelesActivity">
 
     <include layout="@layout/toolbar"></include>
 </RelativeLayout>

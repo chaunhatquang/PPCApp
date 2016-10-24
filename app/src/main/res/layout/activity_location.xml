@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.haitr.ppc_app.Activity.LocationActivity">
+    tools:context="com.perfectproperties.app.ppc_app.Activity.LocationActivity">
 
     <include layout="@layout/toolbar"></include>
 

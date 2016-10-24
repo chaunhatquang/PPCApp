@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/color_Main"
     android:orientation="vertical"
-    tools:context="com.example.haitr.ppc_app.Activity.SplashActivity">
+    tools:context="com.perfectproperties.app.ppc_app.Activity.SplashActivity">
 
     <ImageView
         android:layout_width="wrap_content"

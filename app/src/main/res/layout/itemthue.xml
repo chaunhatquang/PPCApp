@@ -23,6 +23,33 @@
             android:layout_height="180dp"
             android:scaleType="centerCrop"
             android:src="@drawable/capture" />
+        <TextView
+            android:layout_width="144dp"
+            android:layout_height="36dp"
+            android:id="@+id/txtgiaProject"
+            android:layout_gravity="bottom"
+            android:background="@drawable/price"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text=" 5.0 Tỷ"
+            />
+        <TextView
+            android:layout_width="99dp"
+            android:layout_height="70dp"
+            android:id="@+id/txtblock"
+            android:layout_gravity="right"
+            android:background="@drawable/type"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:textColor="#fff"
+            android:text="Ruby1"
+            android:gravity="right"
+            android:textStyle="bold"
+            />
     </FrameLayout>
 
 </LinearLayout>
