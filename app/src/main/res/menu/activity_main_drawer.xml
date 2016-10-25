@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/iconhomeee"
+        android:title="@string/item_home" />
+    <item
+        android:id="@+id/nav_news"
+        android:icon="@drawable/ic_news_origin"
+        android:title="@string/item_news" />
+    <item
+        android:id="@+id/nav_partner"
+        android:icon="@drawable/ic_partner_origin"
+        android:title="@string/item_partner" />
+    <item
+        android:id="@+id/nav_hiring"
+        android:icon="@drawable/ic_hiring_origin"
+        android:title="@string/item_hiring" />
+    <item
+        android:id="@+id/nav_aboutus"
+        android:icon="@drawable/ic_about_origin"
+        android:title="@string/item_about" />
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@drawable/ic_setting_origin"
+        android:title="@string/item_setting" />
+
+
+</menu>
