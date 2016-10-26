@@ -78,7 +78,7 @@ public class DetailBuyActivity extends AppCompatActivity {
         imgcall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String phone = "0838221122";
+                String phone = "0839262998";
                 Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
                 startActivity(intent);
             }

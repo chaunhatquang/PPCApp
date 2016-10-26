@@ -26,7 +26,7 @@ public class SellAdapter extends RecyclerView.Adapter<RecyclerViewHolder_Sell> {
 
     @Override
     public RecyclerViewHolder_Sell onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.itemforsell, null);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_for_sell, null);
         RecyclerViewHolder_Sell viewHolder = new RecyclerViewHolder_Sell(view);
         return viewHolder;
     }

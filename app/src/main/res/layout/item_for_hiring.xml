@@ -1,50 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:layout_height="120dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:minHeight="80dp"
+    tools:context="com.perfectproperties.app.ppc_app.Fragment.HiringFrament">
 
-    <FrameLayout
+    <ImageView
+        android:id="@+id/image_hiring"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_hiring" />
+
+
+    <TextView
+        android:id="@+id/text_hiring"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp">
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/image_hiring"
+        android:text="Tuyển Nhân Viên Marketing "
+        android:textColor="@color/color_Main"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/image_hiring"
-            android:layout_width="150dp"
-            android:layout_height="159dp"
-            android:scaleType="fitStart"
-            android:src="@drawable/bg_hiring" />
-
-    </FrameLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/text_deadline"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/text_hiring"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/image_hiring"
+        android:text="Hạn nộp: 29/11/2016"
+        android:textColor="@color/color_Main"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/text_hiring"
-            android:layout_width="208dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
-            android:text="Tuyển Nhân Viên Thiết Kế \nHạn nộp: 1/10/2016"
-            android:textColor="@color/color_Main"
-            android:textSize="15dp"
-            android:textStyle="bold" />
 
-        <Button
-            android:layout_width="120dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end"
-            android:layout_marginTop="60dp"
-            android:background="@drawable/ic_button1"
-            android:text="Read More"
-            android:textColor="#FFFFFF" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

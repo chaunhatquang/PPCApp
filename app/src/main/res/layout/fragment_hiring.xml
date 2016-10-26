@@ -2,27 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp">
 
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="160dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/txtHiring"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tuyển dụng chuyên ngành Marketing tháng 11"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="14dp"
-            android:layout_marginStart="14dp" />
-
-    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_Hiring"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

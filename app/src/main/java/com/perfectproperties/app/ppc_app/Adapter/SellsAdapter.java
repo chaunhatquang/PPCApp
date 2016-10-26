@@ -35,7 +35,7 @@ public class SellsAdapter extends ArrayAdapter<SellsEntity> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        convertView = inflater.inflate(R.layout.itemforsell,null);
+        convertView = inflater.inflate(R.layout.item_for_sell,null);
 
         TextView name = (TextView)convertView.findViewById(R.id.txtName);
         ImageView img = (ImageView)convertView.findViewById(R.id.image_sell);

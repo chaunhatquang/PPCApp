@@ -53,7 +53,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Perfect Property Company(PPC) là Doanh nghiệp hoạt động chuyên nghiệp trong lĩnh vực môi giới và tiếp thị bất động sản trong nước cũng như quốc tế, PPC được phát triển dựa trên nền tảng là sự hiểu biết sâu sắc về thị trường bất động sản, pháp luật và mối quan hệ vững chắc với các nhà đầu tư bất động sản chuyên nghiệp tại Việt Nam và Quốc Tế.\n"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/textView3" />
 
             <FrameLayout
                 android:layout_width="match_parent"

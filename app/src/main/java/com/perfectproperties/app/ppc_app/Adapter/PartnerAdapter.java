@@ -28,7 +28,7 @@ public class PartnerAdapter extends RecyclerView.Adapter<RecyclerViewHolder_Part
 
     @Override
     public RecyclerViewHolder_Partner onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.itemforpartner, null);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_for_partner, null);
         RecyclerViewHolder_Partner viewHolder = new RecyclerViewHolder_Partner(view);
         return viewHolder;
     }
@@ -42,6 +42,7 @@ public class PartnerAdapter extends RecyclerView.Adapter<RecyclerViewHolder_Part
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(),PartnerDetailActivity.class);
                 i.putExtra("Link",item_partners.get(position).getLink());
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
             }
         });

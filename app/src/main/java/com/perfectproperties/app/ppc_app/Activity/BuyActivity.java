@@ -1,6 +1,7 @@
 package com.perfectproperties.app.ppc_app.Activity;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -41,7 +42,7 @@ public class BuyActivity extends Activity {
     Model model;
     Toolbar toolbar;
     TextView title;
-    ImageView imgback,imgdirect;
+    ImageView imgback, imgdirect;
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -53,12 +54,11 @@ public class BuyActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buy);
-
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         title = (TextView) toolbar.findViewById(R.id.toolbar_title);
         title.setText("Thuê");
         imgback = (ImageView) toolbar.findViewById(R.id.imgback);
-        imgdirect= (ImageView) toolbar.findViewById(R.id.imgdirect);
+        imgdirect = (ImageView) toolbar.findViewById(R.id.imgdirect);
         imgdirect.setVisibility(View.GONE);
         imgback.setOnClickListener(new View.OnClickListener() {
             @Override

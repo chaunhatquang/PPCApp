@@ -30,7 +30,7 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerViewHolder_News> {
 
     @Override
     public RecyclerViewHolder_News onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.itemfornews, null);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.items_for_news, null);
         RecyclerViewHolder_News viewHolder = new RecyclerViewHolder_News(view);
         return viewHolder;
     }
@@ -41,8 +41,9 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerViewHolder_News> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(),NewDetailActivity.class);
+                Intent i = new Intent(v.getContext().getApplicationContext(),NewDetailActivity.class);
                 i.putExtra("Link",item_news.get(position).getLink());
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
             }
         });

@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.perfectproperties.app.ppc_app.Activity.ContentHiringActivity;
+import com.perfectproperties.app.ppc_app.Adapter.HiringAdapter;
 import com.perfectproperties.app.ppc_app.Other.Item_Hiring;
 import com.perfectproperties.app.ppc_app.R;
 
@@ -36,25 +37,16 @@ public class HiringFrament extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_hiring, container, false);
-
-        doFormWidget(view);
-        // Inflate the layout for this fragment
-        //recycler_hiring
-//        recyclerView = (RecyclerView) view.findViewById(R.id.recycler_hiring);
+        // Inflate the layout for this fragment recycler_hiring
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview_Hiring);
         try {
-//            List<Item_Hiring> item_hirings = getAllItem();
-//            layoutManager = new LinearLayoutManager(getContext());
-//
-//            recyclerView.setLayoutManager(layoutManager);
-//            HiringAdapter hiringAdapter = new HiringAdapter(getContext().getApplicationContext(), item_hirings);
-//            recyclerView.setAdapter(hiringAdapter);
-            txtHiring.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intentHiring = new Intent(getActivity(), ContentHiringActivity.class);
-                    startActivity(intentHiring);
-                }
-            });
+            List<Item_Hiring> item_hirings = getAllItem();
+            layoutManager = new LinearLayoutManager(getContext());
+
+            recyclerView.setLayoutManager(layoutManager);
+            HiringAdapter hiringAdapter = new HiringAdapter(getContext().getApplicationContext(), item_hirings);
+            recyclerView.setAdapter(hiringAdapter);
+
 
         } catch (Exception e) {
             Log.d("ERROR", e.toString());
@@ -64,12 +56,9 @@ public class HiringFrament extends Fragment {
 
     private List<Item_Hiring> getAllItem() {
         List<Item_Hiring> item_hirings = new ArrayList<Item_Hiring>();
-        item_hirings.add(new Item_Hiring("Tuyển Nhân Viên Thiết Kế \\nHạn nộp: 1/10/2016", R.drawable.bg_hiring));
-        item_hirings.add(new Item_Hiring("Tuyển Nhân Viên Thiết Kế \\nHạn nộp: 1/10/2016", R.drawable.bg_hiring1));
+        item_hirings.add(new Item_Hiring("Tuyển nhân viên Marketing","Hạn nộp: 29/10/2016",R.drawable.ic_tuyendung));
         return item_hirings;
     }
 
-    private void doFormWidget(View view){
-        txtHiring = (TextView) view.findViewById(R.id.txtHiring);
-    }
+
 }

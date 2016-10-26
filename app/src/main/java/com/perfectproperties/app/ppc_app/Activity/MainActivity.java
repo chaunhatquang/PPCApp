@@ -154,7 +154,6 @@ public class MainActivity extends AppCompatActivity
                 HomeFragment homeFragment = new HomeFragment();
                 fragmentTransaction.replace(R.id.fragment_home_page, homeFragment).commit();
                 break;
-
             case R.id.nav_hiring:
                 toolbar_title.setText(R.string.item_hiring);
                 fragmentTransaction = fragmentManager.beginTransaction();

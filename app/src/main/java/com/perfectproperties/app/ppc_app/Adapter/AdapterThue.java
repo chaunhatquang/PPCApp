@@ -9,9 +9,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.perfectproperties.app.ppc_app.Activity.BuyActivity;
 import com.perfectproperties.app.ppc_app.Other.Model;
 import com.perfectproperties.app.ppc_app.R;
 
@@ -53,7 +51,7 @@ public class AdapterThue extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if (convertView == null) {
-            convertView = mLayoutInflater.inflate(R.layout.itemthue, null);
+            convertView = mLayoutInflater.inflate(R.layout.item_for_rent, null);
             holder = new ViewHolder();
             holder.linkHinh = (ImageView) convertView.findViewById(R.id.imgThumb);
             holder.tv= (TextView) convertView.findViewById(R.id.tvtitles);

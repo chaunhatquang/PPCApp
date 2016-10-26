@@ -1,5 +1,6 @@
 package com.perfectproperties.app.ppc_app.Activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -61,7 +62,7 @@ public class SellActivity extends AppCompatActivity {
 
         listView = (ListView)findViewById(R.id.listSells);
         sellsList = getsellsList();
-        SellsAdapter adapter = new SellsAdapter(this, R.layout.itemforsell,getsellsList());
+        SellsAdapter adapter = new SellsAdapter(this, R.layout.item_for_sell,getsellsList());
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

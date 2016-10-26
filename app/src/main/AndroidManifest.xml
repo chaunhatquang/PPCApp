@@ -8,27 +8,33 @@
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:requiresSmallestWidthDp="320"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="PPC_APP"
+        android:label="PPC"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name="com.perfectproperties.app.ppc_app.Activity.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
 
-
-
-        <activity android:name="com.perfectproperties.app.ppc_app.Activity.RelesActivity" />
         <activity
             android:name="com.perfectproperties.app.ppc_app.Activity.DetailedProjectActivity"
-            android:label="Chi Tiết Dự Án" />
-        <activity android:name="com.perfectproperties.app.ppc_app.Activity.LocationActivity" />
+            android:label="Chi Tiết Dự Án"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.perfectproperties.app.ppc_app.Activity.LocationActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.perfectproperties.app.ppc_app.Activity.SplashActivity"
             android:screenOrientation="portrait"
@@ -39,21 +45,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.perfectproperties.app.ppc_app.Buy.DetailBuyActivity">
+        <activity
+            android:name="com.perfectproperties.app.ppc_app.Buy.DetailBuyActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.perfectproperties.app.ppc_app.Activity.BuyActivity" />
         </activity>
-        <activity android:name="com.perfectproperties.app.ppc_app.Buy.DetailActivity" />
-        <activity android:name="com.perfectproperties.app.ppc_app.Activity.SellActivity">
+        <activity
+            android:name="com.perfectproperties.app.ppc_app.Buy.DetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.perfectproperties.app.ppc_app.Activity.SellActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.perfectproperties.app.ppc_app.Activity.MainActivity" />
         </activity>
-        <activity android:name="com.perfectproperties.app.ppc_app.Activity.BuyActivity" />
-        <activity android:name="com.perfectproperties.app.ppc_app.Activity.NewDetailActivity" />
-        <activity android:name="com.perfectproperties.app.ppc_app.Activity.PartnerDetailActivity" />
-        <activity android:name="com.perfectproperties.app.ppc_app.Activity.ContentHiringActivity" />
+        <activity
+            android:name="com.perfectproperties.app.ppc_app.Activity.BuyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.perfectproperties.app.ppc_app.Activity.NewDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.perfectproperties.app.ppc_app.Activity.PartnerDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.perfectproperties.app.ppc_app.Activity.ContentHiringActivity"
+            android:screenOrientation="portrait" />
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -69,7 +89,8 @@
 
         <activity
             android:name="com.perfectproperties.app.ppc_app.Buy.MapsActivity"
-            android:label="@string/title_activity_maps">
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait">
 
         </activity>
 

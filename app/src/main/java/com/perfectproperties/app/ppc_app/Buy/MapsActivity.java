@@ -58,10 +58,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         GoogleApiClient.OnConnectionFailedListener,
         GoogleMap.OnMarkerDragListener,
         GoogleMap.OnMapLongClickListener,
-        View.OnClickListener,LocationListener {
+        View.OnClickListener, LocationListener {
     Toolbar toolbar;
     TextView title;
-    ImageView imgback,imgdirect;
+    ImageView imgback, imgdirect;
 
     private GoogleMap mMap;
     float lat, lon;
@@ -85,9 +85,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         setContentView(R.layout.activity_maps);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         title = (TextView) toolbar.findViewById(R.id.toolbar_title);
-        title.setText("MAP");
+        title.setText(R.string.item_maps);
         imgback = (ImageView) toolbar.findViewById(R.id.imgback);
-        imgdirect= (ImageView) toolbar.findViewById(R.id.imgdirect);
+        imgdirect = (ImageView) toolbar.findViewById(R.id.imgdirect);
 
         imgback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,25 +106,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .addOnConnectionFailedListener(this)
                 .addApi(LocationServices.API)
                 .addApi(AppIndex.API).build();
-        Intent i=getIntent();
-        lat= (float) i.getSerializableExtra("lat");
-        lon= (float) i.getSerializableExtra("lon");
+        Intent i = getIntent();
+        lat = (float) i.getSerializableExtra("lat");
+        lon = (float) i.getSerializableExtra("lon");
         askPermissionsAndShowMyLocation();
         imgdirect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LatLng latLngadd=new LatLng(lat,lon);
+                LatLng latLngadd = new LatLng(lat, lon);
                 Location myLocation = getMyLocation();
-                LatLng latloca=new LatLng(myLocation.getLatitude(),myLocation.getLongitude());
+                LatLng latloca = new LatLng(myLocation.getLatitude(), myLocation.getLongitude());
                 mMap.addMarker(new MarkerOptions().position(latloca).draggable(true));
                 mMap.addMarker(new MarkerOptions().position(latloca).draggable(true));
                 mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
 
 
-                LatLng myLatLng = new LatLng(myLocation.getLatitude(),myLocation.getLongitude());
-                if (latLngadd != null){
-                    getDirection(myLatLng.latitude,myLatLng.longitude,latLngadd.latitude,latLngadd.longitude);
-                }else{
+                LatLng myLatLng = new LatLng(myLocation.getLatitude(), myLocation.getLongitude());
+                if (latLngadd != null) {
+                    getDirection(myLatLng.latitude, myLatLng.longitude, latLngadd.latitude, latLngadd.longitude);
+                } else {
                     Toast.makeText(MapsActivity.this, "Null LatLng", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -273,7 +273,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         googleMap.getUiSettings().setZoomGesturesEnabled(true);
 
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        LatLng latLng = new LatLng(lat,lon);
+        LatLng latLng = new LatLng(lat, lon);
 
         mMap.addMarker(new MarkerOptions().position(latLng).draggable(true));
 
@@ -299,14 +299,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             e.printStackTrace();
         }
 
-        if (lstAddress.size() != 0){
-            Address address=lstAddress.get(0);
-            LatLng addressLocation=new LatLng(address.getLatitude(),address.getLongitude());
-            String a=String.valueOf(addressLocation.latitude);
+        if (lstAddress.size() != 0) {
+            Address address = lstAddress.get(0);
+            LatLng addressLocation = new LatLng(address.getLatitude(), address.getLongitude());
+            String a = String.valueOf(addressLocation.latitude);
             //Toast.makeText(MapsActivity.this,a,Toast.LENGTH_LONG).show();
             return addressLocation;
-        }
-        else {
+        } else {
             return null;
         }
     }
@@ -422,7 +421,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         return urlString.toString();
     }
 
-    public void getDirection(double fromLatitude, double fromLongitude,double toLatitude,double toLongitude) {
+    public void getDirection(double fromLatitude, double fromLongitude, double toLatitude, double toLongitude) {
 
         String url = makeURL(fromLatitude, fromLongitude, toLatitude, toLongitude);
         // String url = makeURL(10.7672153, 106.6855493, 10.8733081, 106.7630472);
@@ -573,8 +572,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Creating a LatLng object for the current location
         LatLng latLng = new LatLng(latitude, longitude);
-
-
 
 
         // Showing the current location in Google Map

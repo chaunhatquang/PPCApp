@@ -13,7 +13,7 @@
     <string name="button_buy">MUA</string>
     <string name="button_sell">BÁN</string>
     <string name="button_business">GIAO DỊCH</string>
-    <string name="button_more">READ MORE</string>
+    <string name="button_more">ĐỌC THÊM</string>
 
     <!-- Item name -->
     <string name="item_home">Trang Chủ</string>
@@ -25,9 +25,9 @@
     <string name="item_detail_new">Chi Tiết Tin Tức</string>
 
 
-    <string name="item_call">CALL</string>
-    <string name="item_mail">MAIL</string>
-    <string name="item_maps">MAPS</string>
-    <string name="title_activity_maps">Map</string>
-    <string name="title_activity_maps_sell">Map</string>
+    <string name="item_call">GỌI ĐIỆN</string>
+    <string name="item_mail">EMAIL</string>
+    <string name="item_maps">BẢN ĐỒ</string>
+    <string name="title_activity_maps">Maps</string>
+    <string name="title_activity_maps_sell">Maps</string>
 </resources>

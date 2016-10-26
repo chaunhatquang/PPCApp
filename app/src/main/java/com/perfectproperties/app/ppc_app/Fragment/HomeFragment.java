@@ -1,6 +1,5 @@
 package com.perfectproperties.app.ppc_app.Fragment;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.perfectproperties.app.ppc_app.Activity.BuyActivity;
-import com.perfectproperties.app.ppc_app.Activity.RelesActivity;
 import com.perfectproperties.app.ppc_app.Activity.SellActivity;
 import com.perfectproperties.app.ppc_app.R;
 
@@ -18,7 +16,7 @@ import com.perfectproperties.app.ppc_app.R;
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment implements View.OnClickListener {
-    private Button btnSell, btnBuy, btnReles;
+    private Button btnSell, btnBuy;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -42,11 +40,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button_sell:
-                Intent sell_intent = new Intent(getActivity(),SellActivity.class);
+                Intent sell_intent = new Intent(getActivity(), SellActivity.class);
                 startActivity(sell_intent);
                 break;
             case R.id.button_buy:
-                Intent buy_intent = new Intent(getContext(),BuyActivity.class);
+                Intent buy_intent = new Intent(getContext(), BuyActivity.class);
                 startActivity(buy_intent);
                 break;
 
