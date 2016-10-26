@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context="com.perfectproperties.app.ppc_app.Fragment.HomeFragment">
+
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="50dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo_origin" />
+
+    <Button
+        android:id="@+id/button_sell"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/img_logo"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/ic_button_buy"
+        android:gravity="center"
+        android:onClick="btn_Click"
+        android:text="BÁN"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_buy"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/button_buy"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/ic_button_sell"
+        android:onClick="btn_Click"
+        android:text=" THUÊ"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+</FrameLayout>
